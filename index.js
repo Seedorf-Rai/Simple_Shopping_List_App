@@ -1,6 +1,10 @@
 // Getting new Item to the list
 
 var getInput = document.querySelector('#input-item')
+getInput.addEventListener('focus', (e) => {
+  console.log(getInput.style);
+  getInput.style.outlineColor = 'green'
+})
 getInput.addEventListener('keyup', () => {
   console.log(getInput.value);
 })
@@ -19,19 +23,19 @@ inputBtn.addEventListener('click', function (e) {
   }
   if (inputVal) {
     var x = true;
-    getListItems.forEach((el)=>{
-      console.log(inputVal , "this is inside the function");
-      if(el.firstElementChild.textContent == inputVal) {
+    getListItems.forEach((el) => {
+      console.log(inputVal, "this is inside the function");
+      if (el.firstElementChild.textContent == inputVal) {
         x = false;
         document.querySelector('.invalid').style.display = 'block'
-        setTimeout(()=>{
-        document.querySelector('.invalid').style.display = 'none'
-          
-        },3000)
+        setTimeout(() => {
+          document.querySelector('.invalid').style.display = 'none'
+
+        }, 3000)
 
       }
     })
-    if(x){
+    if (x) {
       var newDiv = document.createElement('div')
       newDiv.className = 'list-item'
       var newBtn = document.createElement('button')
@@ -93,6 +97,9 @@ getClear.addEventListener('click', (e) => {
 // Filter Logic
 
 const getFilter = document.querySelector('.filter')
+getFilter.addEventListener('focus', (e) => {
+  getFilter.style.outlineColor = 'green'
+})
 getFilter.addEventListener('keyup', (e) => {
   var getListItems = document.querySelectorAll('.list-item')
 
@@ -122,13 +129,12 @@ getFilter.addEventListener('keyup', (e) => {
       //   el.style.display = 'none'
       //  }
       // console.log(typeof e.target.value);
-      for(var i = 0 ; i < e.target.value.length ; i++){
-        if( el.firstElementChild.textContent[i] == e.target.value[i] ){
-             el.style.display = 'flex'
-           }
-           else{
-            el.style.display = 'none'
-           }
+      for (var i = 0; i < e.target.value.length; i++) {
+        if (el.firstElementChild.textContent[i] == e.target.value[i]) {
+          el.style.display = 'flex'
+        } else {
+          el.style.display = 'none'
+        }
       }
     })
   }
