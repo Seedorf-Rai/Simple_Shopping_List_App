@@ -105,3 +105,16 @@ body {
 button:hover {
     cursor: pointer;
 }
+
+.invalid {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    height: 20px;
+    border: none;
+    width: 76%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    display: none;
+}

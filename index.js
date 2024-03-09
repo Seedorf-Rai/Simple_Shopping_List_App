@@ -1,4 +1,5 @@
 // Getting new Item to the list
+
 var getInput = document.querySelector('#input-item')
 getInput.addEventListener('keyup', () => {
   console.log(getInput.value);
@@ -9,6 +10,7 @@ console.log(inputBtn);
 
 var inputVal;
 inputBtn.addEventListener('click', function (e) {
+  var getListItems = document.querySelectorAll('.list-item')
   e.preventDefault();
   if (getInput.value) {
     inputVal = getInput.value
@@ -16,22 +18,37 @@ inputBtn.addEventListener('click', function (e) {
     inputVal = null;
   }
   if (inputVal) {
-    var newDiv = document.createElement('div')
-    newDiv.className = 'list-item'
-    var newBtn = document.createElement('button')
-    newBtn.setAttribute('id', 'rem-btn')
-    newBtn.innerHTML = 'X';
-    var newH = document.createElement('h5')
-    newH.innerHTML = inputVal
-    newDiv.appendChild(newH)
-    newDiv.appendChild(newBtn)
-    const parentDiv = document.getElementById('list')
-    parentDiv.appendChild(newDiv)
-    const getClear = document.querySelector('.clear-all')
-    getClear.style.display = 'block'
-    console.log(newDiv);
-    getInput.value = ''
-    console.log(newBtn);
+    var x = true;
+    getListItems.forEach((el)=>{
+      console.log(inputVal , "this is inside the function");
+      if(el.firstElementChild.textContent == inputVal) {
+        x = false;
+        document.querySelector('.invalid').style.display = 'block'
+        setTimeout(()=>{
+        document.querySelector('.invalid').style.display = 'none'
+          
+        },3000)
+
+      }
+    })
+    if(x){
+      var newDiv = document.createElement('div')
+      newDiv.className = 'list-item'
+      var newBtn = document.createElement('button')
+      newBtn.setAttribute('id', 'rem-btn')
+      newBtn.innerHTML = 'X';
+      var newH = document.createElement('h5')
+      newH.innerHTML = inputVal
+      newDiv.appendChild(newH)
+      newDiv.appendChild(newBtn)
+      const parentDiv = document.getElementById('list')
+      parentDiv.appendChild(newDiv)
+      const getClear = document.querySelector('.clear-all')
+      getClear.style.display = 'block'
+      console.log(newDiv);
+      getInput.value = ''
+      console.log(newBtn);
+    }
   }
 })
 
@@ -133,3 +150,14 @@ body.addEventListener('click', (e) => {
 //   const getH = document.querySelector('h1')
 //   getH.textContent = `X ${e.offsetX} Y ${e.offsetY}`
 // })
+
+// Adding functionalities based on keys
+
+const x = document.getElementById('input-item')
+x.addEventListener('keypress', (e) => {
+  //  console.log(e.key);
+  //  console.log(e.key , e.shiftKey);
+  //  console.log(e.key , e.ctrlKey);
+  //  console.log(e.key , e.altKey);
+
+})
