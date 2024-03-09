@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="shop-menu">
+      <div class="head">
+        <img
+          src="timetable_1048953.png"
+          style="width: 50px; height: 50px"
+          alt="Calender Pic"
+        />
+        <h1>Shopping List</h1>
+      </div>
+      <div>
+        <form action="" class="search">
+          <input
+            type="text"
+            id="input-item"
+            placeholder="Enter Item"
+            required
+          />
+          <button type="submit" id="in-btn">+Add Item</button>
+        </form>
+      </div>
+      <div>
+        <input class="filter" type="text" placeholder="Filter Item" />
+      </div>
+      <div class="list" id="list">
+        <div class="list-item">
+          <h5>Apples</h5>
+          <button id="rem-btn">X</button>
+        </div>
+        <div class="list-item">
+          <h5>Orange Juice</h5>
+          <button id="rem-btn">X</button>
+        </div>
+        <div class="list-item">
+          <h5>Oreos</h5>
+          <button id="rem-btn">X</button>
+        </div>
+      </div>
+      <button class="clear-all">Clear All</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

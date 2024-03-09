@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    user-select: none;
+}
+
+.shop-menu {
+    /* background: red; */
+    width: 300px;
+    padding-left: 30px;
+}
+
+.head {
+    display: flex;
+    margin-bottom: 20px;
+    /* justify-content: space-between; */
+}
+
+.head h1 {
+    margin-left: 20px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.search input {
+    height: 30px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #666666;
+    padding-left: 10px;
+}
+
+.search button {
+    margin-top: 10px;
+    width: 80px;
+    border-radius: 4px;
+    border: none;
+    background-color: #25a5f5;
+    padding: 5px;
+    color: white;
+}
+
+.filter {
+    height: 30px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #666666;
+    padding-left: 10px;
+    margin-left: 15px;
+}
+
+.list {
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.list-item {
+    /* background-color:red; */
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #666666;
+}
+
+.list-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 20px;
+    border-radius: 3px;
+}
+
+.clear-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    width: 67%;
+    margin-top: 10px;
+    height: 25px;
+    background: #ffffff;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    /* padding-left: 20px;
+    padding-top: 4px; */
+}
+
+button:hover {
+    cursor: pointer;
+}
